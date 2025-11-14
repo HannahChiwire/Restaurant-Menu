@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Dining Menu</title>
+  <style>
+    /* Beach Style Theme with Deep Blue Accents for Sigelege Beach Resort */
+
+    /* ===== Global Styling ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      color: #00334e;
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(135deg, #0066cc, #003366);
+      color: white;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: wave 15s infinite linear;
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      opacity: 0.95;
+      margin-top: 10px;
+    }
+
+    .tagline {
+      display: block;
+      font-size: 1rem;
+      margin-top: 15px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px 10px;
+      background: #004c80;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    nav a:hover {
+      background: white;
+      color: #004c80;
+      border-color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== Sections ===== */
+    .menu-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .menu-section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #0066cc, #003366);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .section-description {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #004c6d;
+      margin-bottom: 35px;
+      font-style: italic;
+    }
+
+    /* ===== Menu Grid ===== */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 10px;
+    }
+
+    .item {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .item:hover::before {
+      opacity: 1;
+    }
+
+    .item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      border-color: #0066cc;
+    }
+
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .item:hover img {
+      transform: scale(1.05);
+    }
+
+    .item h3 {
+      margin: 15px 0 8px;
+      font-size: 1.4rem;
+      color: #00334e;
+      font-weight: 600;
+    }
+
+    .item p {
+      font-size: 0.95rem;
+      color: #004c6d;
+      margin-bottom: 12px;
+      min-height: 40px;
+    }
+
+    .item span {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #0066cc;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background: #e0f7fa;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .item:hover span {
+      background: #0066cc;
+      color: white;
+    }
+
+    /* ===== Special Badge ===== */
+    .special-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      background: linear-gradient(135deg, #003366, #001a33);
+      color: white;
+      padding: 30px 20px;
+      margin-top: 50px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    .footer-tagline {
+      font-style: italic;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .menu-section h2 {
+        font-size: 2rem;
+      }
+
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Lake Malawi Vibes -->
+  <header>
+    <h1>🌊 Our Restaurant Menu 🌊</h1>
+    <p>Where Lake Malawi Meets Culinary Excellence</p>
+    <span class="tagline">Savor the Taste of Paradise</span>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#breakfast">☀️ Breakfast</a>
+    <a href="#lunch">🍽️ Lunch</a>
+    <a href="#dinner">🌙 Dinner</a>
+    <a href="#desserts">🍰 Desserts</a>
+    <a href="#drinks">🍹 Drinks</a>
+    <a href="#snacks">🥨 Snacks</a>
+  </nav>
+
+  <!-- Breakfast Section -->
+  <section id="breakfast" class="menu-section">
+    <h2>Breakfast</h2>
+    <p class="section-description">Start your day with our delightful morning selections</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">Popular</span>
+        <img src="images/fullbreakfast.jpg" alt="Full Breakfast" />
+        <h3>Full Breakfast</h3>
+        <p>A hearty morning feast with perfectly cooked eggs, crispy toast, and freshly brewed tea to energize your day.</p>
+        <span>MK 5,500</span>
+      </div>
+      <div class="item">
+        <img src="images/pancake.png" alt="Pancakes" />
+        <h3>Fluffy Pancakes</h3>
+        <p>Golden, cloud-like pancakes drizzled with sweet maple syrup – a morning treat that melts in your mouth.</p>
+        <span>MK 4,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lunch Section -->
+  <section id="lunch" class="menu-section">
+    <h2>Lunch</h2>
+    <p class="section-description">Midday delights to satisfy your appetite by the lake</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">Chef's Pick</span>
+        <img src="images/grilled chicken.jpg" alt="Grilled Chicken" />
+        <h3>Grilled Chicken</h3>
+        <p>Tender, flame-grilled chicken breast served with your choice of fragrant rice or crispy golden chips.</p>
+        <span>MK 7,500</span>
+      </div>
+      <div class="item">
+        <img src="images/fish.jpg" alt="Fish Fillet" />
+        <h3>Fresh Fish Fillet</h3>
+        <p>Locally caught, perfectly seasoned fish fillet – a taste of Lake Malawi on your plate.</p>
+        <span>MK 6,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dinner Section -->
+  <section id="dinner" class="menu-section">
+    <h2>Dinner</h2>
+    <p class="section-description">Evening specialties for a memorable lakeside dining experience</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">Signature</span>
+        <img src="images/Rice.jpg" alt="Rice And Beef" />
+        <h3>Rice & Premium Beef</h3>
+        <p>Succulent beef paired with aromatic rice – a satisfying dinner that celebrates bold flavors.</p>
+        <span>MK 12,000</span>
+      </div>
+      <div class="item">
+        <img src="images/burger.jpg" alt="Beef Burger" />
+        <h3>Gourmet Beef Burger</h3>
+        <p>Juicy beef patty stacked with fresh toppings in a toasted bun – comfort food at its finest.</p>
+        <span>MK 9,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Desserts Section -->
+  <section id="desserts" class="menu-section">
+    <h2>Desserts</h2>
+    <p class="section-description">Sweet endings to complete your perfect meal</p>
+    <div class="menu-grid">
+      <div class="item">
+        <img src="images/cake.jpg" alt="Chocolate Cake" />
+        <h3>Decadent Chocolate Cake</h3>
+        <p>Rich, velvety chocolate layers that will transport your taste buds to paradise.</p>
+        <span>MK 3,000</span>
+      </div>
+      <div class="item">
+        <span class="special-badge">Kids Love It</span>
+        <img src="images/ice cream.png" alt="Ice Cream" />
+        <h3>Artisan Ice Cream</h3>
+        <p>Creamy scoops in vanilla, chocolate, or strawberry – a cool treat for warm lakeside days.</p>
+        <span>MK 2,500</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drinks Section -->
+  <section id="drinks" class="menu-section">
+    <h2>Drinks</h2>
+    <p class="section-description">Refreshing beverages to quench your thirst</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">Fresh Daily</span>
+        <img src="images/fresh juice.jpg" alt="Fresh Juice" />
+        <h3>Fresh Tropical Juice</h3>
+        <p>Vibrant orange, sweet pineapple, or exotic mango – freshly squeezed to perfection.</p>
+        <span>MK 1,500</span>
+      </div>
+      <div class="item">
+        <img src="images/softdrinks.jpg" alt="Soft Drinks" />
+        <h3>Chilled Soft Drinks</h3>
+        <p>Classic Coca‑Cola, refreshing Fanta, or crisp Sprite – ice-cold and ready to enjoy.</p>
+        <span>MK 1,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Snacks Section -->
+  <section id="snacks" class="menu-section">
+    <h2>Snacks</h2>
+    <p class="section-description">Quick bites perfect for sharing by the beach</p>
+    <div class="menu-grid">
+      <div class="item">
+        <img src="images/chips.jpg" alt="Chips" />
+        <h3>Golden Crispy Chips</h3>
+        <p>Perfectly seasoned, crispy on the outside, fluffy on the inside – pure satisfaction.</p>
+        <span>MK 2,500</span>
+      </div>
+      <div class="item">
+        <img src="images/samosa.jpg" alt="Samosa" />
+        <h3>Savory Samosas</h3>
+        <p>Three golden, crispy parcels filled with seasoned goodness – a local favorite.</p>
+        <span>MK 2,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>🏖️ Dining Menu🏖️</strong></p>
+    <p>Experience the magic of Lake Malawi, one meal at a time</p>
+    <p class="footer-tagline">"Where Every Dish Tells a Story"</p>
+    <p style="margin-top: 15px; font-size: 0.9rem;">&copy; 2025 Dining Menu. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
