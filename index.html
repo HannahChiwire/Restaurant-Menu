@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> La Criso Lounge and Bar</title>
+  <title>La Criso Lounge and Bar</title>
   <style>
-    /* Beach Style Theme with Deep Blue Accents for Sigelege Beach Resort */
+    /* Modern Urban Restaurant Theme with Deep Blue Accents */
 
     /* ===== Global Styling ===== */
     * {
@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      background: linear-gradient(to bottom, #f5f7fa, #e8ecf1);
       color: #00334e;
       line-height: 1.6;
     }
@@ -42,12 +42,13 @@
       width: 200%;
       height: 200%;
       background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: wave 15s infinite linear;
+      animation: shimmer 20s infinite linear;
     }
 
-    @keyframes wave {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    @keyframes shimmer {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1); }
     }
 
     header h1 {
@@ -221,7 +222,7 @@
       color: #0066cc;
       margin-top: 10px;
       padding: 8px 20px;
-      background: #e0f7fa;
+      background: #e8f4fd;
       border-radius: 20px;
       transition: all 0.3s ease;
     }
@@ -295,103 +296,325 @@
 </head>
 <body>
 
-  <!-- Header with Lake Malawi Vibes -->
+  <!-- Header -->
   <header>
-    <h1>🌊 La Criso Lounge and Bar 🌊</h1>
-    <p>Where Lake Malawi Meets Culinary Excellence</p>
-    <span class="tagline">Savor the Taste of Paradise</span>
+    <h1>🍴 La Criso Lounge and Bar 🍴</h1>
+    <p>Where Exceptional Cuisine Meets Warm Hospitality</p>
+    <span class="tagline">Experience Dining Excellence in the Heart of the City</span>
   </header>
 
   <!-- Navigation -->
   <nav>
     <a href="#breakfast">☀️ Breakfast</a>
-    <a href="#lunch">🍽️ Lunch</a>
-    <a href="#dinner">🌙 Dinner</a>
-    <a href="#desserts">🍰 Desserts</a>
-    <a href="#drinks">🍹 Drinks</a>
-    <a href="#snacks">🥨 Snacks</a>
+    <a href="#starters">🥗 Starters</a>
+    <a href="#snacks">🌯 Snacks</a>
+    <a href="#light-meals">🍔 Light Meals</a>
+    <a href="#grill">🥩 From Our Grill</a>
+    <a href="#signature">⭐ Signature Dishes</a>
+    <a href="#fish">🐟 Seafood Selection</a>
+    <a href="#pasta">🍝 Pasta</a>
+    <a href="#local">🍲 Local Signatures</a>
+    <a href="#drinks">☕ Drinks</a>
   </nav>
 
   <!-- Breakfast Section -->
   <section id="breakfast" class="menu-section">
-    <h2>Breakfast</h2>
+    <h2>Breakfasts</h2>
     <p class="section-description">Start your day with our delightful morning selections</p>
     <div class="menu-grid">
       <div class="item">
         <span class="special-badge">Popular</span>
-        <img src="images/fullbreakfast.jpg" alt="Full Breakfast" />
-        <h3>Full Breakfast</h3>
-        <p>A hearty morning feast with perfectly cooked eggs, crispy toast, and freshly brewed tea to energize your day.</p>
-        <span>MK 5,500</span>
+        <img src="images/fullbreakfast.jpg" alt="La Criso English Breakfast" />
+        <h3>La Criso English Breakfast</h3>
+        <p>Toast or fresh bread, potatoes, eggs (boiled, fried, scrambled or omelet) beef sausage, grilled tomato, baked beans + coffee or tea.</p>
+        <span>K 15,000</span>
       </div>
       <div class="item">
-        <img src="images/pancake.png" alt="Pancakes" />
-        <h3>Fluffy Pancakes</h3>
-        <p>Golden, cloud-like pancakes drizzled with sweet maple syrup – a morning treat that melts in your mouth.</p>
-        <span>MK 4,000</span>
+        <img src="images/Perfect Day Breakfast.jpg" alt="Continental Breakfast" />
+        <h3>Continental Breakfast</h3>
+        <p>Toast or fresh bread, potatoes, eggs (boiled, fried, scrambled or omelet), grilled tomato, baked beans + coffee or tea.</p>
+        <span>K 12,000</span>
       </div>
     </div>
   </section>
 
-  <!-- Lunch Section -->
-  <section id="lunch" class="menu-section">
-    <h2>Lunch</h2>
-    <p class="section-description">Midday delights to satisfy your appetite by the lake</p>
+  <!-- Starters Section -->
+  <section id="starters" class="menu-section">
+    <h2>Starters</h2>
+    <p class="section-description">Begin your culinary journey with our appetizers</p>
     <div class="menu-grid">
       <div class="item">
-        <span class="special-badge">Chef's Pick</span>
-        <img src="images/grilled chicken.jpg" alt="Grilled Chicken" />
-        <h3>Grilled Chicken</h3>
-        <p>Tender, flame-grilled chicken breast served with your choice of fragrant rice or crispy golden chips.</p>
-        <span>MK 7,500</span>
+        <img src="images/Mediterranean Greek Salad Recipe.jpg" alt="Greek Salad" />
+        <h3>Greek Salad</h3>
+        <p>Compilation of crispy lettuce, tomato, feta cheese, olives, onions, cucumbers, tossed in Greek dressing.</p>
+        <span>K 15,000</span>
       </div>
       <div class="item">
-        <img src="images/fish.jpg" alt="Fish Fillet" />
-        <h3>Fresh Fish Fillet</h3>
-        <p>Locally caught, perfectly seasoned fish fillet – a taste of Lake Malawi on your plate.</p>
-        <span>MK 6,000</span>
+        <img src="images/Chicken Caesar Salad Recipe _ Easy and Classic.jpg" alt="Chicken Caesar Salad" />
+        <h3>Chicken Caesar Salad</h3>
+        <p>Char-grilled chicken breast flakes, crispy lettuce, tomato, cucumbers, onion dressed with tangy homemade sauce.</p>
+        <span>K 10,000 (M) / K 15,000 (L)</span>
+      </div>
+      <div class="item">
+        <img src="images/Mushroom Soup_ A Creamy Delight for All Seasons.jpg" alt="Cream of Mushroom Soup" />
+        <h3>Cream of Mushroom Soup</h3>
+        <p>Sautéed mushrooms in velouté finished with fresh cream.</p>
+        <span>K 15,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Homemade Cream of Chicken Soup.jpg" alt="Cream of Chicken and Coconut Soup" />
+        <h3>Cream of Chicken & Coconut Soup</h3>
+        <p>Mouthwatering poached chicken flakes in velouté, seasoned with fresh herbs and finished with coconut milk.</p>
+        <span>K 15,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Velvety Autumn Comfort_ Easy Roasted Butternut….jpg" alt="Butternut Soup" />
+        <h3>Butternut Soup</h3>
+        <p>Creamed puree of butternut squash seasoned with aromatics topped with fresh chopped herbs.</p>
+        <span>K 15,000</span>
       </div>
     </div>
   </section>
 
-  <!-- Dinner Section -->
-  <section id="dinner" class="menu-section">
-    <h2>Dinner</h2>
-    <p class="section-description">Evening specialties for a memorable lakeside dining experience</p>
+  <!-- Savory Snacks Section -->
+  <section id="snacks" class="menu-section">
+    <h2>Savory Snacks</h2>
+    <p class="section-description">Delicious bites perfect for any time</p>
     <div class="menu-grid">
       <div class="item">
         <span class="special-badge">Signature</span>
-        <img src="images/Rice.jpg" alt="Rice And Beef" />
-        <h3>Rice & Premium Beef</h3>
-        <p>Succulent beef paired with aromatic rice – a satisfying dinner that celebrates bold flavors.</p>
-        <span>MK 12,000</span>
+        <img src="images/Chicken Shawarma with Creamy Garlic Sauce.jpg" alt="Chicken Wrap" />
+        <h3>Chicken Wrap</h3>
+        <p>Incredible chappati/rotti wrap loaded with tender juicy chicken strips, cucumber, avocado (when available), tomato, lettuce and binded with La Criso signature served with homemade fries.</p>
+        <span>K 25,000</span>
       </div>
       <div class="item">
-        <img src="images/burger.jpg" alt="Beef Burger" />
-        <h3>Gourmet Beef Burger</h3>
-        <p>Juicy beef patty stacked with fresh toppings in a toasted bun – comfort food at its finest.</p>
-        <span>MK 9,000</span>
+        <img src="images/Have you ever craved a dish that tantalizes your….jpg" alt="Tacos" />
+        <h3>Tacos</h3>
+        <p>Mexican traditional made of hand sized tortilla filled with beef or chicken fillets, veggies and chilly sauces served with homemade fries.</p>
+        <span>K 20,000</span>
+      </div>
+      <div class="item">
+        <img src="images/ホットドッグとコロッケパン - どんぴんたんの台所.jpg" alt="Hot Dogs" />
+        <h3>Hot Dogs</h3>
+        <p>Pan-fried Hungarian sausage served on a roll drizzled with mustard sauce and side salad.</p>
+        <span>K 8,000</span>
       </div>
     </div>
   </section>
 
-  <!-- Desserts Section -->
-  <section id="desserts" class="menu-section">
-    <h2>Desserts</h2>
-    <p class="section-description">Sweet endings to complete your perfect meal</p>
+  <!-- Light Meals Section -->
+  <section id="light-meals" class="menu-section">
+    <h2>Light Meals</h2>
+    <p class="section-description">Satisfying options for a lighter appetite</p>
     <div class="menu-grid">
       <div class="item">
-        <img src="images/cake.jpg" alt="Chocolate Cake" />
-        <h3>Decadent Chocolate Cake</h3>
-        <p>Rich, velvety chocolate layers that will transport your taste buds to paradise.</p>
-        <span>MK 3,000</span>
+        <img src="images/burger.jpg" alt="Beef Burger" />
+        <h3>Beef Burger</h3>
+        <p>Be inspired by our juicy, flavour packed beef patty topped with crispy lettuce, gherkins, onion, tomato slices sandwiched with toasted burger rolls served with side salad and French fries.</p>
+        <span>K 17,500</span>
       </div>
       <div class="item">
-        <span class="special-badge">Kids Love It</span>
-        <img src="images/ice cream.png" alt="Ice Cream" />
-        <h3>Artisan Ice Cream</h3>
-        <p>Creamy scoops in vanilla, chocolate, or strawberry – a cool treat for warm lakeside days.</p>
-        <span>MK 2,500</span>
+        <img src="images/🍔🍗 Fresh Chicken Burger – Juicy, Flavorful….jpg" alt="Chicken Burger" />
+        <h3>Chicken Burger</h3>
+        <p>Succulent chicken patty topped with crispy lettuce, gherkins, onion, tomato slices sandwiched with toasted burger rolls served with side salad and French fries.</p>
+        <span>K 17,500</span>
+      </div>
+      <div class="item">
+        <img src="images/This grilled chicken kebab platter is bursting….jpg" alt="Chicken Kebab" />
+        <h3>Chicken Kebab</h3>
+        <p>Skewed chicken dices with veges grilled to tenderness served with side salad and homemade fries.</p>
+        <span>K 25,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Lamb Kebabs with Yogurt Sauce_ Skewers of….jpg" alt="Beef Kebab" />
+        <h3>Beef Kebab</h3>
+        <p>Skewed tender beef steak dices with veges grilled to tenderness served with side salad and homemade fries.</p>
+        <span>K 28,000</span>
+      </div>
+      <div class="item">
+        <img src="images/….jpg" alt="Pizza" />
+        <h3>Pizza</h3>
+        <p>Scrumptious pizzas with optional toppings ranging from beef, chicken, pepperoni, vegetable, pineapple. Vegetarian/Margarita also available.</p>
+        <span>K 28,000 (M) / K 30,000 (L)</span>
+      </div>
+      <div class="item">
+        <img src="images/Korean Fried Chicken Wings.jpg" alt="Chicken Wings" />
+        <h3>Chicken Wings</h3>
+        <p>Fried wings (three) dredged with BBQ served with side salad and home-made fries.</p>
+        <span>K 17,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- From Our Grill Section -->
+  <section id="grill" class="menu-section">
+    <h2>From Our Grill</h2>
+    <p class="section-description">Premium grilled selections cooked to perfection</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">Premium</span>
+        <img src="images/Grilled T-Bone Steak Recipe_ 5 Steps to Juicy….jpg" alt="Grilled T. Bone Steak" />
+        <h3>Grilled T. Bone Steak</h3>
+        <p>Well marinated 250-300gm. T. Bone steak grilled to your choice either rare, medium, well done and served with a choice of pepper sauce or creamy mushroom sauce.</p>
+        <span>K 25,000</span>
+      </div>
+      <div class="item">
+        <img src="images/The Best Grilled Pork Chops with a delicious pork….jpg" alt="Grilled Pork Chops" />
+        <h3>Grilled Pork Chops</h3>
+        <p>Tender marinated chop served with apple sauce, mixed vegetables and a choice of starch.</p>
+        <span>K 25,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Grilled Thai Coconut Chicken Skewers - Pups with….jpg" alt="Grilled Chicken" />
+        <h3>Grilled Chicken</h3>
+        <p>Well marinated char grilled/oven grilled ¼ chicken served with your choice of starch, sauce and either seasonal vegetables or salads.</p>
+        <span>K 17,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Savor the Spirit of Hawaii with this Mouthwatering….jpg" alt="Chicken Khwasu Khwasu" />
+        <h3>Chicken Khwasu Khwasu</h3>
+        <p>Spicy ¼ chicken pieces cooked in mango achar, tomato, onions and bell peppers served with your choice of starch and seasonal veges or salads.</p>
+        <span>K 20,000</span>
+      </div>
+      <div class="item">
+        <span class="special-badge">For 4 People</span>
+        <img src="images/🌟 Get ready to indulge in a delicious Mixed Grill….jpg" alt="La Criso Mix Grill" />
+        <h3>LA CRISO MIX GRILL</h3>
+        <p>A combo that serves 4 of grilled T-bone steak, pork chop, drum sticks, sausage, starch, three assorted dips.</p>
+        <span>K 90,000</span>
+      </div>
+      <div class="item">
+        <img src="images/24 Sizzling Beef Stir Fry Recipes to Spice Up Your….jpg" alt="Beef Stir-fry" />
+        <h3>Beef Stir-fry</h3>
+        <p>Fried beef stripes and medley of vegetable juliennes flambéed with red wine textured with sauces served with a choice of starch and either vegetables or salads.</p>
+        <span>K 28,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Everyday Meals - Garlic Honey Chicken Stir-Fry….jpg" alt="Chicken Stir-fry" />
+        <h3>Chicken Stir-fry</h3>
+        <p>Fried chicken stripes and medley of vegetable juliennes flambéed with white wine textured with sauces served with a choice of starch and either vegetables or salads.</p>
+        <span>K 25,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Dishes Section -->
+  <section id="signature" class="menu-section">
+    <h2>Signature Dishes</h2>
+    <p class="section-description">Our chef's special creations</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">House Special</span>
+        <img src="images/Delicious Smothered Steak Recipe_ A Comfort Food….jpg" alt="La Criso Special" />
+        <h3>La Criso Special</h3>
+        <p>Grilled sirloin steak to degree of doneness served on bed of mashed potato topped with beer battered onion rings with a choice of creamy sauce either pepper/mushroom and seasonal veges.</p>
+        <span>K 28,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Skwierczący, idealnie grillowany stek T-bone….jpg" alt="Scrumptious Sizzling Steak" />
+        <h3>Scrumptious Sizzling Steak</h3>
+        <p>A tender juicy, perfectly seasoned sliced beef fillet served on a very hot griddle plate topped with sunnyside up fried egg and a rich sizzling red wine glaze served with your choice of starch and seasoned mixed vegetables.</p>
+        <span>K 28,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Cheeseburger Quesadillas.jpg" alt="Quesadillas" />
+        <h3>Quesadillas</h3>
+        <p>Golden brown crispy tortillas with juicy fillings in options of beef, chicken or medley vegetables.</p>
+        <span>K 22,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seafood Selection Section -->
+  <section id="fish" class="menu-section">
+    <h2>Seafood Selection</h2>
+    <p class="section-description">Fresh catches prepared to perfection</p>
+    <div class="menu-grid">
+      <div class="item">
+        <span class="special-badge">On Special</span>
+        <img src="images/sour-curry-with-snakehead-fish-spicy-garden-hot-pot-thai-food.jpg" alt="The Great Chambo" />
+        <h3>The Great Chambo</h3>
+        <p>Whole or open chambo (charcoal grilled, stewed or pan fried) large/extra-large served with your choice of starch, sauce and seasonal vegetables or salads.</p>
+        <span>On Special</span>
+      </div>
+      <div class="item">
+        <span class="special-badge">On Special</span>
+        <img src="images/Pwason nan Sos_ Haitian Fish in Sauce Recipe….jpg" alt="The Famous Batala" />
+        <h3>The Famous Batala</h3>
+        <p>Whole or open Batala fish (charcoal grilled, stewed or pan fried) large/extra-large served with your choice of starch, sauce and seasonal vegetables or salads.</p>
+        <span>On Special</span>
+      </div>
+      <div class="item">
+        <span class="special-badge">On Special</span>
+        <img src="images/🐟 Spice up your dinner with Paprika Crusted Fried….jpg" alt="Deep fried Crumbed fish fillets" />
+        <h3>Deep Fried Crumbed Fish Fillets</h3>
+        <p>Fish fillet coated in spicy crumbs served with tartar sauce, homemade fries and salads.</p>
+        <span>On Special</span>
+      </div>
+      <div class="item">
+        <img src="images/Cantonese Pan Fried Prawns (Kon Jeen Ha Look) 干煎虾碌.jpg" alt="Alaskan Prawns" />
+        <h3>Alaskan Prawns</h3>
+        <p>Pan fried king prawns with a choice of lemon garlic sauce or herbed peri-peri sauce served with your choice of starch and seasonal vegetables or salads.</p>
+        <span>K 30,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pasta Corner Section -->
+  <section id="pasta" class="menu-section">
+    <h2>Pasta Corner</h2>
+    <p class="section-description">Italian classics with a local touch</p>
+    <div class="menu-grid">
+      <div class="item">
+        <img src="images/Lasagna Bolognese is the ultimate labor of love….jpg" alt="Lasagna Verde" />
+        <h3>Lasagna Verde</h3>
+        <p>Lasagna sheets stuffed with Bolognese sauce, béchamel, mixed herbs.</p>
+        <span>K 30,000</span>
+      </div>
+      <div class="item">
+        <img src="images/bolognese.jpg" alt="Napolitano Pasta Bolognese" />
+        <h3>Napolitano Pasta Bolognese</h3>
+        <p>Choice of assorted pastas (penne, spaghetti, tagliatelle) with Bolognese sauce gratinated with cheese.</p>
+        <span>K 25,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Chicken Alfredo.jpg" alt="Chicken Alfredo" />
+        <h3>Chicken Alfredo</h3>
+        <p>Stripes of chicken fillet cooked in cheese creamy sauce.</p>
+        <span>K 30,000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Signatures Section -->
+  <section id="local" class="menu-section">
+    <h2>Local Signatures</h2>
+    <p class="section-description">Traditional Malawian favorites</p>
+    <div class="menu-grid">
+      <div class="item">
+        <img src="images/Chicken and tomato curry stew.jpg" alt="Local Chicken" />
+        <h3>Local Chicken Stew / Boiled</h3>
+        <p>Traditional preparation of chicken, served with your choice of nsima or rice.</p>
+        <span>K 17,000</span>
+      </div>
+      <div class="item">
+        <img src="images/beeef stew.jpg" alt="Beef Stew" />
+        <h3>Beef Stew / Boiled</h3>
+        <p>Tender beef prepared in traditional style, perfect with nsima.</p>
+        <span>K 16,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Goat Curry Recipe (Chettinad Goat Kulambu)….jpg" alt="Goat Stew" />
+        <h3>Goat Stew / Boiled</h3>
+        <p>Slow-cooked goat meat in rich traditional sauce.</p>
+        <span>K 17,000</span>
+      </div>
+      <div class="item">
+        <img src="images/Miss N A N G A C H E F 🇸🇳 on Instagram_ _Coucou….jpg" alt="Mbalagha" />
+        <h3>Mbalagha</h3>
+        <p>A local delicacy prepared with authentic Malawian flavors.</p>
+        <span>K 19,000</span>
       </div>
     </div>
   </section>
@@ -399,48 +622,33 @@
   <!-- Drinks Section -->
   <section id="drinks" class="menu-section">
     <h2>Drinks</h2>
-    <p class="section-description">Refreshing beverages to quench your thirst</p>
+    <p class="section-description">Hot beverages to complement your meal</p>
     <div class="menu-grid">
       <div class="item">
-        <span class="special-badge">Fresh Daily</span>
-        <img src="images/fresh juice.jpg" alt="Fresh Juice" />
-        <h3>Fresh Tropical Juice</h3>
-        <p>Vibrant orange, sweet pineapple, or exotic mango – freshly squeezed to perfection.</p>
-        <span>MK 1,500</span>
+        <img src="images/hotchocolate.jpg" alt="Hot Chocolate" />
+        <h3>Hot Chocolate</h3>
+        <p>Rich and creamy chocolate drink.</p>
+        <span>K 8,000</span>
       </div>
       <div class="item">
-        <img src="images/softdrinks.jpg" alt="Soft Drinks" />
-        <h3>Chilled Soft Drinks</h3>
-        <p>Classic Coca‑Cola, refreshing Fanta, or crisp Sprite – ice-cold and ready to enjoy.</p>
-        <span>MK 1,000</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Snacks Section -->
-  <section id="snacks" class="menu-section">
-    <h2>Snacks</h2>
-    <p class="section-description">Quick bites perfect for sharing by the beach</p>
-    <div class="menu-grid">
-      <div class="item">
-        <img src="images/chips.jpg" alt="Chips" />
-        <h3>Golden Crispy Chips</h3>
-        <p>Perfectly seasoned, crispy on the outside, fluffy on the inside – pure satisfaction.</p>
-        <span>MK 2,500</span>
+        <img src="images/coffee.png" alt="Coffee" />
+        <h3>Coffee</h3>
+        <p>Freshly brewed coffee.</p>
+        <span>K 4,000</span>
       </div>
       <div class="item">
-        <img src="images/samosa.jpg" alt="Samosa" />
-        <h3>Savory Samosas</h3>
-        <p>Three golden, crispy parcels filled with seasoned goodness – a local favorite.</p>
-        <span>MK 2,000</span>
+        <img src="images/tea.jpg" alt="Tea" />
+        <h3>Tea</h3>
+        <p>Classic hot tea.</p>
+        <span>K 3,000</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p><strong>🏖️ La Criso Lounge and Bar🏖️</strong></p>
-    <p>Experience the magic of Lake Malawi, one meal at a time</p>
+    <p><strong>🍴 La Criso Lounge and Bar 🍴</strong></p>
+    <p>Fine Dining in the Heart of the City</p>
     <p class="footer-tagline">"Where Every Dish Tells a Story"</p>
     <p style="margin-top: 15px; font-size: 0.9rem;">&copy; 2025 La Criso Lounge and Bar. All Rights Reserved.</p>
   </footer>
